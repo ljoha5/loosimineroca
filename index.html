@@ -51,7 +51,7 @@
 </body>
 
 <script type="text/javascript">
-	const audio_success = new Audio('success2.mp3');
+	// const audio_success = new Audio('success2.mp3');
 	const audio_dis = new Audio('fail.mp3');
 
 	window.addEventListener('scroll', function() {
@@ -63,10 +63,10 @@
 		if (document.getElementById('first-name').value != "" && document.getElementById('last-name').value != "" && document.getElementById('nickname').value != "" && document.getElementById('email').value != "" && document.getElementById('confirm-email').value != "" && document.getElementById('password').value != "" && document.getElementById('confirm-password').value != "") {
 			const success_back = document.getElementById('success_back');
 			setTimeout(() => {
-				success_back.style.right = "20px";
-				audio_success.play();
+				// success_back.style.right = "20px";
+				// audio_success.play();
 			setTimeout(() => {
-	  			removeSuccess()
+	  			// removeSuccess()
 			}, 4000);
 			}, 100);
 		} else {
@@ -82,9 +82,9 @@
 		
 	}
 
-	function removeSuccess() {
-		success_back.style.right = "-400px";
-	}
+	// function removeSuccess() {
+	// 	success_back.style.right = "-400px";
+	// }
 
 	function removeDis() {
 		dis_back.style.right = "-400px";
