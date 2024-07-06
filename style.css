@@ -1,0 +1,112 @@
+body, html{
+	padding: 0;
+	border: 0;
+	margin: 0;
+
+	scroll-behavior: smooth;
+	font-family: "Ga Maamli", sans-serif;
+	width: 100%;
+	height: 200vh;
+	background-image: url(back.jpg);
+	background-position-x: center;
+	background-position-y: 500px;
+	background-repeat: no-repeat;
+	color: white;
+
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+.sec{
+	width: 100%;
+	height: 100vh;
+	display: flex; 
+	align-items: center;
+	justify-content: space-around;
+}
+.info{
+	width: 50%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.btn{
+	text-decoration: none;
+	color: white;
+	background-color: #283b4fa8;
+	font-family: 'Open Sans', sans-serif;
+	padding: 15px 60px;
+	border-radius: 7px;
+	margin-top: 10px;
+	transition: 0.2s;
+}
+.btn:hover{
+	padding: 15px 70px;
+	background-color: #283b4f;
+}
+
+/*body {
+    background-color: #0000FF;  Синий фон 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}*/
+
+.form-container {
+    width: 700px;
+    height: 700px;
+    background-color: #0000008c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.registration-form input {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.button_sub {
+   	text-decoration: none;
+	color: white;
+	background-color: #283b4fa8;
+	font-family: 'Open Sans', sans-serif;
+	padding: 15px 60px;
+	border-radius: 7px;
+	margin-top: 10px;
+	transition: 0.2s;
+	width: 100px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.button_sub:hover {
+	background-color: #283b4f;
+}
+.inp{
+	border-width: 0px;
+	margin-bottom: 20px;
+	background-color: #00000000;
+	border-bottom: 1px solid white;
+	color: white;
+}

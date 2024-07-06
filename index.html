@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RAM raha loosimine!</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap');
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+</style>
+</head>
+<body>
+	<p id="success_back" style="transition: 0.5s; font-family: 'Roboto', sans-serif; position: fixed; bottom: 20px; right: -400px; padding: 15px 100px; background-color: #32adb487; border-radius: 6px; "><span style="color: white; ">Korras:</span> edu võidu puhul!</p>
+
+	<p id="dis_back" style="transition: 0.5s; font-family: 'Roboto', sans-serif; position: fixed; bottom: 20px; right: -400px; padding: 15px 100px; background-color: #EE4E4E; border-radius: 6px; "><span style="color: white; ">Viga:</span> täidke vormi!</p>
+
+<section class="sec" id="home">
+	<div class="info">
+		<h1 style="margin: 0; margin-bottom: 70px;  font-size: 4em;"><span style="color: #E9C46A">Rocca </span><span style="color: #F4A261">Al </span><span style="color: #E76F51">Mare</span> - suur raha loosimine</h1>
+		<h3 style="font-size: 1.4em; font-family: 'Open Sans', sans-serif;">juba meiega: <span style="color: #E68369;">6773</span>/10'000</h3>
+		<p style="font-size: 1.2em; font-family: 'Open Sans', sans-serif; width: 400px;">Osalege meie Rocca Al Mare kaubanduskeskuse loojate raha loosis. Osalejad üle terve Eesti võivad võita kuni <span style="color: #EE4E4E;">5500€</span>. Lõpeb 30. juulil. Registreerige enda nuppude vajutamises:</p>
+		<a class="btn" href="#reg">registreeri</a>
+	</div>
+</section>
+<section class="sec" id="reg">
+	<div class="form-container">
+        <form class="registration-form">
+            <h1 style="text-align: center;margin: 0; margin-bottom: 40px; font-size: 2em;"><span style="color: #E9C46A">Rocca </span><span style="color: #F4A261">Al </span><span style="color: #E76F51">Mare</span> registreerimine:</h1>
+            <input class="inp" type="text" id="first-name" placeholder="Nimi" name="first-name" required>
+            <input class="inp" type="text" id="last-name" placeholder="Perekonnanimi" name="last-name" required>
+            
+            <input class="inp" type="text" id="nickname" placeholder="Hüüdnimi" name="nickname" required>
+            
+            <input class="inp" type="email" placeholder="Email" id="email" name="email" required>
+            
+            <input class="inp" type="email" placeholder="Kordage emaili" id="confirm-email" name="confirm-email" required>
+            
+            <input class="inp" type="password" placeholder="Parool" id="password" name="password" required>
+            
+            <input class="inp" type="password" placeholder="Kordage parooli" id="confirm-password" name="confirm-password" required>
+            <div style="translate: 0% 20%; width: 90%; display: flex; justify-content: space-between; align-items: center; margin: 0 auto;">
+            	<a href="#home" class="button_sub">Tagasi</a>
+            	<a style="cursor: pointer;" onclick="success()" class="button_sub">Kinnitan</a>
+            </div>
+            
+        </form>
+    </div>
+</section>
+</body>
+
+<script type="text/javascript">
+	const audio_success = new Audio('success2.mp3');
+	const audio_dis = new Audio('fail.mp3');
+
+	window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            document.body.style.backgroundPositionY = `${scrollPosition * 1.5 - 700}px`;
+        });
+
+	function success() {
+		if (document.getElementById('first-name').value != "" && document.getElementById('last-name').value != "" && document.getElementById('nickname').value != "" && document.getElementById('email').value != "" && document.getElementById('confirm-email').value != "" && document.getElementById('password').value != "" && document.getElementById('confirm-password').value != "") {
+			const success_back = document.getElementById('success_back');
+			setTimeout(() => {
+				success_back.style.right = "20px";
+				audio_success.play();
+			setTimeout(() => {
+	  			removeSuccess()
+			}, 4000);
+			}, 100);
+		} else {
+			const dis_back = document.getElementById('dis_back');
+			setTimeout(() => {
+				dis_back.style.right = "20px";
+				audio_dis.play();
+			setTimeout(() => {
+	  			removeDis()
+			}, 4000);
+			}, 100);
+		}
+		
+	}
+
+	function removeSuccess() {
+		success_back.style.right = "-400px";
+	}
+
+	function removeDis() {
+		dis_back.style.right = "-400px";
+	}
+</script>
+</html>
